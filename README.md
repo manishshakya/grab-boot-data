@@ -2,7 +2,7 @@
 
 Boot time is always important in any embedded systems. One of the ways to analyze and improve boot time is by examining initcall execution and probe times. I learned about the following tools during a [Boot-Time SIG](https://elinux.org/Boot-Time_SIG) meeting:
 
-- [**grab-boot-data.sh**](https://birdcloud.org/boot-time/Boot-time_Tools) - collects data using reading dmesg and /proc/config.gz
+- [**grab-boot-data.sh**](https://birdcloud.org/boot-time/Boot-time_Tools) - collects data reading dmesg and /proc/config.gz
 - [**analyze-initcall-debug.py**](https://lore.kernel.org/linux-embedded/2289257.vFx2qVVIhK@fedora.fritz.box/T/#t) - analyze the collected data and generate html/text summary
 
 ## Experiment Setup
@@ -27,7 +27,7 @@ To evaluate boot process, I analyzed four development boards:
    ```sh
    cat <genrated_file> | python3 analyze-initcall-debug.py
    ```
-6. **Optional:**You can upload using following in the birdcloud.org
+6. **Optional:** You can upload using following in the birdcloud.org
    ```sh
    grab-boot-data.sh -u <file>
    ```
